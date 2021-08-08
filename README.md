@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm start:server`
+
+Runs the app server. This should be run first in order to work with the app.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
@@ -12,12 +16,23 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+### `npm run storybook`
+
+In order to see Storybook for app components.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+
+### `npm test:e2e`
+
+Launches Cypress+Cucumber runner for end 2 end tests,
+**Note: Server and client both should be up and running**
+
+
+### `npm test build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,18 +42,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Answering to two questions
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> What are the ways of evaluating FE performance?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Page Speed Index, TTI, First Contentful Paint
+We can monitor these parameters using Lighthouse for example or if we have some monitoring tools like Dynatrace 
+then it would also be possible to track the frontend performance
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> What are the parameters to take into account before adding a new library to the project?
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+First if I already have some experiences with that library the it would be easier to decide whether that tool
+is useful for that project or not. Then I check with other team mates to see what they have in their mind. Otherwise I will check community of the library to determine if there are 
+already developers who actually use that and in case they can answer to questions also that's a tool 
+we can rely on in terms of regular updates. I will check the size of library to make sure it doesn't increase our bundle size unnecessarily.
